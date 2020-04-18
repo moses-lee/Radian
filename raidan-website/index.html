@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> R A D I A N </title>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: "Montserrat", sans-serif
+            }
+            
+            body,
+            html {
+                height: 100%;
+                line-height: 1.8;
+            }
+            /* Full height image header */
+            
+            .bgimg-1 {
+                background-position: center;
+                background-size: cover;
+                min-height: 100%;
+            }
+            
+            .w3-bar .w3-button {
+                padding: 16px;
+            }
+            
+            .clearfloat {
+                clear: both;
+            }
+            
+            #logo {
+                width: 160px;
+                height: auto;
+                transform: scale(1.3);
+                padding-left: 10px;
+            }
+            
+            #title {
+                background-color: black;
+                opacity: 0.9;
+            }
+            
+            video {
+                height: 100vh;
+                width: 100%;
+                object-fit: fill;
+                position: absolute;
+                z-index: -1;
+            }
+            
+            #videoContainer {
+                color: #4F0147;
+                opacity: 0.75;
+                z-index: 2;
+            }
+            
+            #myNavbar {
+                vertical-align: middle;
+            }
+            
+            #aboutbutt {
+                margin-top: 10px;
+                border-top: 5px solid #4F0147;
+                border-bottom: 5px solid #4F0147;
+            }
+            
+            #teambutt {
+                margin-top: 10px;
+                border-top: 5px solid #4F0147;
+                border-bottom: 5px solid #4F0147;
+            }
+            
+            #diagbutt {
+                margin-top: 10px;
+                border-top: 5px solid #4F0147;
+                border-bottom: 5px solid #4F0147;
+            }
+            
+            #about {
+                background-color: #E6E6FA;
+                width: 100vw;
+                height: 100vh;
+            }
+            
+            #submit {
+                margin: 20px 650px;
+                background-color: #4F0147;
+            }
+            
+            #diagnose {
+                background-color: black;
+                width: 100vw;
+                height: 100vh;
+                opacity: 0.90;
+                color: white;
+            }
+        </style>
+
+        <body>
+
+            <!-- Navbar (sit on top) -->
+            <div class="w3-top">
+                <div class="w3-bar w3-white w3-card" id="myNavbar">
+                    <a href="#home" class="w3-bar-item w3-button w3-wide">
+                        <img id="logo" src="img/logo no bg.png" alt="Radian Logo">
+                    </a>
+                    <!-- Right-sided navbar links -->
+                    <div class="w3-right w3-hide-small w3-wide">
+                        <a id="aboutbutt" href="#about" class="w3-bar-item w3-button bar">ABOUT</a>
+                        <a id="diagbutt" href="#diagnose" class="w3-bar-item w3-button"> DIAGNOSE</a>
+                        <a id="teambutt" href="#team" class="w3-bar-item w3-button">TEAM</a>
+                        <a href="#pricing" class="w3-bar-item w3-button"></a>
+                        <!-- <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a> -->
+                    </div>
+                    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+                    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Sidebar on small screens when clicking the menu icon -->
+            <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+                <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+                <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+                <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+                <!-- <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a> -->
+                <!-- <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a> -->
+                <!-- <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a> -->
+            </nav>
+            <!-- Header with full-height image -->
+            <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+                <!-- <iframe id="video-background" src="https://www.youtube.com/embed/eijsMsTYk_0?autoplay=1&loop=1&mute=1&showinfo=0&controls=0&rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                <div id="videoContainer">
+                    <video class="overlay" autoplay loop muted>
+                        <source id="healthcare" src="media/Healthcare Sample Footage.mov">
+                    </video>
+                </div>
+                <div id="title" class="w3-display-left w3-text-white" style="padding:30px">
+                    <span class="w3-jumbo w3-hide-small">COVID-19 Chest X-Ray Diagnosis</span>
+                    <br>
+                    <!-- <span class="w3-xxlarge w3-hide-large w3-hide-medium">COVID-19 Chest X-Ray Diagnosis</span><br> -->
+                    <p><a href="#diagnose" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Let's get started</a></p>
+                </div>
+                <!-- <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i> -->
+                <!-- <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </div> -->
+            </header>
+            <!-- About Section -->
+            <div class="w3-container" style="padding:128px 16px" id="about">
+                <h3 class="w3-center">ABOUT THE COMPANY</h3>
+                <p class="w3-center w3-large"><em>Solving the COVID-19 pandemic one step at a time</em></p>
+                <div class="w3-row-padding w3-center" style="margin-top:64px">
+                    <div class="w3-quarter">
+                        <!--<i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>-->
+                        <img src="img/lungs.png" alt="lungs icon" style="width:30%">
+                        <p class="w3-large">AI-Driven Software</p>
+                        <p>R A D I A N is a powerful machine learning software that uses a convolutional neural network to assess chest X-rays and diagnose COVID-19, SARS, and other lung diseases.</p>
+                    </div>
+                    <div class="w3-quarter">
+                        <!--<i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>-->
+                        <img src="img/record.png" alt="record" style="width:30%">
+                        <p class="w3-large">Expedited Diagnoses</p>
+                        <p>In times of crisis like these, many healthcare providers on the frontline are overwhelmed. R A D I A N helps them quickly assess a person’s likelihood of coronavirus infection with a simple chest X-ray.</p>
+                    </div>
+                    <div class="w3-quarter">
+                        <!--<i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>-->
+                        <img src="img/time.png" alt="time" style="width:30%">
+                        <p class="w3-large">Zero Turnaround Time</p>
+                        <p>Few COVID-19 nasal tests have immediate turnaround; with a backlog of tests, some may even take up to two weeks. Every minute longer these diagnoses take, the more peoples' lives in danger. To solve this problem, R A D I A N provides highly accurate results in less than a minute. </p>
+                    </div>
+                    <div class="w3-quarter">
+                        <!--<i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>-->
+                        <img src="img/x-ray.png" alt="x-ray" style="width:30%">
+                        <p class="w3-large">Vast Accessibility</p>
+                        <p>In many areas across the U.S., swab test kits are in great shortage, leaving countless people untested. X-rays are our next best option. R A D I A N’s deep learning algorithm runs a patient’s chest X-ray across tens of thousands of others from an NIH database, ensuring extremely high diagnostic accuracy.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Diagnose Section -->
+            <div class="w3-container" style="padding:128px 16px" id="diagnose">
+                <h3 class="w3-center">DIAGNOSE</h3>
+                <p class="w3-center w3-large">Upload a chest X-ray for diagnosis</p>
+                <div style="margin-top:48px">
+                    <!-- <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Los Angeles, US</p>
+               <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
+               <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p> -->
+                    <br>
+                    <!--<form action="/action_page.php" target="_blank">-->
+                    <form id="form">
+                        <p>
+                            <input class="w3-input w3-border" id="patient_name" type="text" placeholder="Patient Name" name="PatientName">
+                        </p>
+                        <p>
+                            <input class="w3-input w3-border" type="text" placeholder="Healthcare Provider" name="HealthcareProvider">
+                        </p>
+                        <p>
+                            <input class="w3-input w3-border" type="text" placeholder="Insurance ID" name="InsuranceID">
+                        </p>
+                        <p>
+                            <input type="file" id="lungPic" name="filename" accept="image/*">
+                            <p>
+                                <p>
+                                    <button type="button" id="uploadData">Submit</button>
+                                    <!--<button id="submit"class="w3-button" type="submit">
+                     <i class="fa fa-paper-plane"></i> SUBMIT
+                     </button>-->
+                    </form>
+                    <!-- Based on our model, your liklihood of having COVID-19 is:
+                    <p id="result"></p> -->
+                    <script src="radianform.js">
+                    </script>
+                    <!--  <-- Image of location/map
+               <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px"> -->
+                </div>
+            </div>
+            <!-- Team Section -->
+            <div class="w3-container" style="padding:128px 16px" id="team">
+                <h3 class="w3-center">MEET THE TEAM</h3>
+                <p class="w3-center w3-large">The ones who run the company</p>
+                <div class="w3-row-padding" style="margin-top:64px">
+                    <div class="w3-col l3 m6 w3-margin-bottom">
+                        <div class="w3-card">
+                            <img src="img/jijie.jpeg" alt="Jijie" style="width:100%">
+                            <div class="w3-container">
+                                <h3>Jijie Fan</h3>
+                                <p class="w3-opacity">Product Manager & Designer</p>
+                                <p>Business Administration Student
+                                    <br>@ University of Southern California</p>
+                                <p>
+                                    <button class="w3-button w3-light-grey w3-block"><i class="fa fa-linkedin w3-hover-opacity"></i> <a href="https://www.linkedin.com/in/jijiefan/" target="_blank">LinkedIn</a></button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-col l3 m6 w3-margin-bottom">
+                        <div class="w3-card">
+                            <img src="img/kiana.png" alt="Kiana" style="width:100%">
+                            <div class="w3-container">
+                                <h3>Kiana Wang</h3>
+                                <p class="w3-opacity">Front-End Developer</p>
+                                <p>Business Administration Student
+                                    <br>@ University of Southern California</p>
+                                <p>
+                                    <button class="w3-button w3-light-grey w3-block"><i class="fa fa-linkedin w3-hover-opacity"></i> <a href="https://www.linkedin.com/in/kiana-wang/" target="_blank">LinkedIn</a></button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-col l3 m6 w3-margin-bottom">
+                        <div class="w3-card">
+                            <img src="img/moses.jpeg" alt="Moses" style="width:100%">
+                            <div class="w3-container">
+                                <h3>Moses Lee</h3>
+                                <p class="w3-opacity">Software Engineer</p>
+                                <p>Computer Science Student
+                                    <br>@ Irvine Valley College</p>
+                                <p>
+                                    <button class="w3-button w3-light-grey w3-block"><i class="fa fa-linkedin w3-hover-opacity"></i> <a href="https://www.linkedin.com/in/moseslee97/" target="_blank">LinkedIn</a></button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-col l3 m6 w3-margin-bottom">
+                        <div class="w3-card">
+                            <img src="img/spencer.jpeg" alt="Spencer" style="width:100%">
+                            <div class="w3-container">
+                                <h3>Spencer Churchill</h3>
+                                <p class="w3-opacity">Machine Learning Scientist</p>
+                                <p>Computer Science Student
+                                    <br>@ Irvine Valley College</p>
+                                <p>
+                                    <button class="w3-button w3-light-grey w3-block"><i class="fa fa-linkedin w3-hover-opacity"></i> <a href="https://www.linkedin.com/in/spencer-churchill-b5447b13b/" target="_blank">LinkedIn</a></button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <footer class="w3-center w3-black w3-padding-64">
+                <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+                <div class="clearfloat"></div>
+                <br> R A D I A N Healthcare © 2020
+                <!-- <div class="w3-xlarge w3-section">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </div>
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> -->
+            </footer>
+
+            <script>
+                // Modal Image Gallery
+                function onClick(element) {
+                    document.getElementById("img01").src = element.src;
+                    document.getElementById("modal01").style.display = "block";
+                    var captionText = document.getElementById("caption");
+                    captionText.innerHTML = element.alt;
+                }
+
+                // Toggle between showing and hiding the sidebar when clicking the menu icon
+                var mySidebar = document.getElementById("mySidebar");
+
+                function w3_open() {
+                    if (mySidebar.style.display === 'block') {
+                        mySidebar.style.display = 'none';
+                    } else {
+                        mySidebar.style.display = 'block';
+                    }
+                }
+
+                // Close the sidebar with the close button
+                function w3_close() {
+                    mySidebar.style.display = "none";
+                }
+
+            </script>
+        </body>
+
+</html>
